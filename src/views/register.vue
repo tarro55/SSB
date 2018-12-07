@@ -1,25 +1,16 @@
 <!----------Make By YourName---------------->
  <template>
-    <div>
-        <v-toolbar class="box-blue">   
-    
-            <v-toolbar-side-icon></v-toolbar-side-icon>
-    
-            <v-toolbar-title>Title</v-toolbar-title>
-    
-            <v-spacer></v-spacer>
-    
-            <v-toolbar-items class="hidden-sm-and-down">
-    
-                <v-btn flat>Link One</v-btn>
-    
-                <v-btn flat>Link Two</v-btn>
-    
-                <v-btn flat>Link Three</v-btn>
-    
-            </v-toolbar-items>
-    
-        </v-toolbar>
+<div>
+    <h1>SIGN IN</h1>
+    <br>
+    <el-input placeholder="Username" v-model="input"></el-input>
+    <br><br>
+    <el-input placeholder="E-mail" v-model="input"></el-input>
+    <br><br>
+    <el-input placeholder="Password" v-model="input"></el-input>
+    <br><br>
+    <el-input placeholder="Confirm - Password" v-model="input"></el-input>
+    <br><br>
 
     </div>
 </template>

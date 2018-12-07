@@ -10,15 +10,16 @@ function loadView(view) {
 
 export default new Router({
     routes: [
+       
         {
             path: '/',
-            name: 'home',
-            component: loadView('home')
+            name: 'login',
+            component: loadView('login')
         },
         {
-            path: '/xx',
-            name: 'xx',
-            component: loadView('xx')
+            path: '/register',
+            name: 'register',
+            component: loadView('register')
         },
       
     ]
