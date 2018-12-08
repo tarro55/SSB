@@ -3,15 +3,15 @@
 <div>
     <h1>Sign Up</h1>
     <br>
-    <el-input placeholder="Username" v-model="input"></el-input>
+    <el-input placeholder="Username" v-model="Username"></el-input>
     <br><br>
-    <el-input placeholder="E-mail" v-model="input"></el-input>
+    <el-input placeholder="E-mail" v-model="email"></el-input>
     <br><br>
-    <el-input placeholder="Password" v-model="input"></el-input>
+    <el-input placeholder="Password" v-model="Password"></el-input>
     <br><br>
-    <el-input placeholder="Confirm - Password" v-model="input"></el-input>
+    <el-input placeholder="Confirm - Password" v-model="ConfirmPass"></el-input>
     <br><br>
-    <el-input placeholder="DriverLicence" v-model="input"  ></el-input>
+    <el-input placeholder="DriverLicence" v-model="DriverLicence"  ></el-input>
     <br><br>
     <el-row>
         <el-button type="warning" round>Sign In</el-button>
@@ -34,6 +34,11 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
+        Username:'',
+        email:'',
+        Password:'',
+        ConfirmPass:'',
+        DriverLicence:'',
 
         };
     }, 

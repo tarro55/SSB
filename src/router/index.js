@@ -22,6 +22,11 @@ export default new Router({
             component: loadView('fogetPass')
         },
         {
+            path: '/newPass',
+            name: 'newPass',
+            component: loadView('newPass')
+        },
+        {
             path: '/register',
             name: 'register',
             component: loadView('register')

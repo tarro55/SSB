@@ -1,19 +1,18 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <h1>log in</h1>
+    <h1>Forget Password</h1>
     <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
+    <el-input placeholder="New Password" v-model="NewPass"></el-input>
     <br><br>
-    <el-input placeholder="Password" v-model="Password"></el-input>
+    <el-input placeholder="Confirm - New Password" v-model="ConfirmNewPass"></el-input>
     <br><br>
-    <el-row >
-        <el-button type="warning" round>Login</el-button>
+    <el-row>
+        <el-button type="warning" round>change Password</el-button>
     </el-row>
-    <br>
-    <p><a @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
-    <br><hr><br>
-    <p>Don't have account ? <a @click="$router.push('/register')"> &nbsp sign up</a></p>
+
+
+
     </div>
 </template>
 
@@ -32,8 +31,8 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-        Username:'',
-        Password:'',
+        NewPass:'',
+        ConfirmNewPass:'',
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/

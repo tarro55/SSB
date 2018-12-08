@@ -3,12 +3,12 @@
 <div>
     <h1>Forget Password</h1>
     <br>
-    <el-input placeholder="E-mail" v-model="input"></el-input>
+    <el-input placeholder="E-mail" v-model="email"></el-input>
     <br><br>
-    <el-input placeholder="Secunty Number" v-model="input"></el-input>
+    <el-input placeholder="Secunty Number" v-model="SecuntyNumber"></el-input>
     <br><br>
     <el-row>
-        <el-button type="warning" round>Sent Mail</el-button>
+        <el-button @click="$router.push('/newPass')" type="warning" round>Sent Mail</el-button>
     </el-row>
 
 
@@ -31,7 +31,8 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-
+        email:'',
+        SecuntyNumber:'',
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
