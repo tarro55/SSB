@@ -1,7 +1,7 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <h1>SIGN IN</h1>
+    <h1>Sign Up</h1>
     <br>
     <el-input placeholder="Username" v-model="input"></el-input>
     <br><br>
@@ -11,6 +11,11 @@
     <br><br>
     <el-input placeholder="Confirm - Password" v-model="input"></el-input>
     <br><br>
+    <el-input placeholder="DriverLicence" v-model="input"  ></el-input>
+    <br><br>
+    <el-row>
+        <el-button type="warning" round>Sign In</el-button>
+    </el-row>
 
     </div>
 </template>

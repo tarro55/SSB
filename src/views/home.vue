@@ -9,9 +9,7 @@
     
             <v-toolbar-title  >Home</v-toolbar-title>
     
-            <v-spacer><el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-             <el-radio-button :label="false">expand</el-radio-button>
-            </el-radio-group></v-spacer>   
+            <v-spacer></v-spacer>   
         </v-toolbar>
 
     </div>
