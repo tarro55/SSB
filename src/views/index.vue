@@ -1,28 +1,22 @@
 <!----------Make By YourName---------------->
  <template>
-<div >
-    <h1>log in</h1>
-    <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
-    <br><br>
-    <el-input placeholder="Password" v-model="Password"></el-input>
-    <br><br>
-    <el-row >
-        <el-button type="warning" round @click="$router.push('/index')">Login</el-button>
-    </el-row>
-    <br>
-      <p><a @click="$router.push('/test')">test</a></p> &nbsp 
+<div>
+        <v-toolbar color="orange" class="box">   
     
-    <br>
-    <p><a @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
-    <br><hr><br>
-    <p>Don't have account ? <a @click="$router.push('/type')"> &nbsp sign up</a></p>
+            <v-toolbar-side-icon>
+
+            </v-toolbar-side-icon>
+    
+            <v-toolbar-title  >Home</v-toolbar-title>
+    
+            <v-spacer></v-spacer>   
+        </v-toolbar>
+
     </div>
 </template>
 
     <script>
 export default {
-    
     name: 'Root',
     /*-------------------------Load Component---------------------------------------*/
     components: {
@@ -35,8 +29,7 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-        Username:'',
-        Password:'',
+
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/

@@ -1,28 +1,13 @@
 <!----------Make By YourName---------------->
  <template>
-<div >
-    <h1>log in</h1>
-    <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
-    <br><br>
-    <el-input placeholder="Password" v-model="Password"></el-input>
-    <br><br>
-    <el-row >
-        <el-button type="warning" round @click="$router.push('/index')">Login</el-button>
-    </el-row>
-    <br>
-      <p><a @click="$router.push('/test')">test</a></p> &nbsp 
-    
-    <br>
-    <p><a @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
-    <br><hr><br>
-    <p>Don't have account ? <a @click="$router.push('/type')"> &nbsp sign up</a></p>
+<div>
+    <h1>Sing Up</h1>
+     <v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; border-radius:50%;" >mdi mdi-history</v-icon>
     </div>
 </template>
 
     <script>
 export default {
-    
     name: 'Root',
     /*-------------------------Load Component---------------------------------------*/
     components: {
@@ -35,8 +20,7 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-        Username:'',
-        Password:'',
+
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
@@ -54,6 +38,9 @@ props:{
 },
     /*-------------------------Methods------------------------------------------*/
 methods:{
+    login(){
+        alert('อีแฮมอีเหี้ย')
+    },
     /******* Methods default run ******/
     load:async function(){
 }
