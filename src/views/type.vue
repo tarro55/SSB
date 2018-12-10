@@ -2,7 +2,8 @@
  <template>
 <div>
     <h1>Sing Up</h1>
-     <v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; border-radius:50%;" >mdi mdi-history</v-icon>
+    <br><br><br>
+     <v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; border-radius:50%;" >mdi-car</v-icon>
     </div>
 </template>
 
