@@ -1,28 +1,29 @@
 <!----------Make By YourName---------------->
  <template>
-<div >
-    <h1>log in</h1>
+<div>
+    <h1>Sign Up</h1>
     <br>
     <el-input placeholder="Username" v-model="Username"></el-input>
     <br><br>
+    <el-input placeholder="E-mail" v-model="email"></el-input>
+    <br><br>
     <el-input placeholder="Password" v-model="Password"></el-input>
     <br><br>
-    <el-row >
-        <el-button type="warning" round>Login</el-button>
+    <el-input placeholder="Confirm - Password" v-model="ConfirmPass"></el-input>
+    <br><br>
+    <el-input placeholder="Student ID" v-model="Student_ID"  ></el-input>
+    <br><br>
+    <el-input placeholder="School Name " v-model="School_Name"  ></el-input>
+    <br><br>
+    <el-row>
+        <el-button type="warning" round>Sign Up</el-button>
     </el-row>
-    <br>
-      <p><a @click="$router.push('/test')">test</a></p> &nbsp 
-    
-    <br>
-    <p><a @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
-    <br><hr><br>
-    <p>Don't have account ? <a @click="$router.push('/registerDriver')"> &nbsp sign up</a></p>
+
     </div>
 </template>
 
     <script>
 export default {
-    
     name: 'Root',
     /*-------------------------Load Component---------------------------------------*/
     components: {
@@ -36,7 +37,12 @@ props:{
     data() {
     return {
         Username:'',
+        email:'',
         Password:'',
+        ConfirmPass:'',
+        Student_ID:'',
+        School_Name:'',
+
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/

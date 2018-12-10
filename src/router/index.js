@@ -27,10 +27,15 @@ export default new Router({
             component: loadView('newPass')
         },
         {
-            path: '/register',
-            name: 'register',
-            component: loadView('register')
+            path: '/registerDriver',
+            name: 'registerDriver',
+            component: loadView('registerDriver')
         },
+        {
+        path: '/test',
+        name: 'test',
+        component: loadView('test')
+         },
       
     ]
     
