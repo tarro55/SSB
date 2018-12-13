@@ -16,7 +16,7 @@
     <el-input placeholder="School Name " v-model="School_Name"  ></el-input>
     <br><br>
     <el-row>
-        <el-button type="warning" round>Sign Up</el-button>
+        <el-button @click="$router.push('/login')" type="warning" round>Sign Up</el-button>
     </el-row>
 
     </div>

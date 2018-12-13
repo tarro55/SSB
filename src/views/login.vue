@@ -1,22 +1,22 @@
 <!----------Make By YourName---------------->
  <template>
 <div >
-    <h1>log in</h1>
+    <h1  style="margin: 50px 50px 3px 135px;" >log in</h1>
     <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
+    <el-input  placeholder="Username" v-model="Username" ></el-input>
     <br><br>
     <el-input placeholder="Password" v-model="Password"></el-input>
     <br><br>
     <el-row >
-        <el-button type="warning" round @click="$router.push('/index')">Login</el-button>
+        <el-button style="margin-left: 130px ;" type="warning" round @click="$router.push('/index')">Login</el-button>
     </el-row>
     <br>
       <p><a @click="$router.push('/test')">test</a></p> &nbsp 
     
     <br>
-    <p><a @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
+    <p><a style="margin-left: 230px ;" @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
     <br><hr><br>
-    <p>Don't have account ? <a @click="$router.push('/type')"> &nbsp sign up</a></p>
+    <p  style="margin-left: 80px ;">Don't have account ? <a @click="$router.push('/type')"> &nbsp sign up</a></p>
     </div>
 </template>
 

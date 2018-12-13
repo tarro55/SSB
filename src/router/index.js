@@ -12,7 +12,7 @@ export default new Router({
     routes: [
        
         {
-            path: '/',
+            path: '/login',
             name: 'login',
             component: loadView('login')
         },
@@ -36,6 +36,12 @@ export default new Router({
             name: 'registerDriver',
             component: loadView('registerDriver')
         },
+        {
+            path: '/registerMember',
+            name: 'registerMember',
+            component: loadView('registerMember')
+        },
+
         {
             path: '/test',
             name: 'test',
