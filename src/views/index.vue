@@ -11,12 +11,12 @@
     
             <v-spacer></v-spacer>   
         </v-toolbar>
-
-        <v-icon id="map" class="box-green wh"  style="font-size:175px; " >map </v-icon> 
-        <v-icon class="box-green wh"  style="font-size:175px; " >message </v-icon> 
-        <v-icon class="box-green wh"  style="font-size:175px; " >group </v-icon> 
-        <v-icon class="box-green wh"  style="font-size:175px; " >departure_board</v-icon> 
-
+    <el-row>
+        <v-icon id="mapp" class="box-green wh"  style="font-size:145px; " >map </v-icon> 
+        <v-icon id="status" class="box-green wh"  style="font-size:145px; " >departure_board </v-icon> 
+        <v-icon id="member" class="box-green wh"  style="font-size:145px; " >group </v-icon> 
+        <v-icon id="pay" class="box-green wh"  style="font-size:145px; " >local_atm</v-icon> 
+    </el-row>
 
     </div>
 </template>
@@ -60,3 +60,17 @@ methods:{
 },
     }
 </script>
+<style>
+#mapp{
+    margin: 20px;
+}
+#status{
+    margin: 20px;
+}
+#member{
+    margin: 20px;
+}
+#pay{
+    margin: 20px;
+}
+</style>
