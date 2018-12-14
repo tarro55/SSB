@@ -47,11 +47,12 @@ export default new Router({
             name: 'test',
             component: loadView('test')
          },
-         {
+        {
             path: '/index',
             name: 'index',
             component: loadView('index')
-             },
+        },
+        
       
     ]
     

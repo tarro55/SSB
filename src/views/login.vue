@@ -14,9 +14,9 @@
       <!--<p><a @click="$router.push('/test')">test</a></p> &nbsp -->
     
     <br>
-    <p><a style="margin-left: 230px ;" @click="$router.push('/fogetPass')">Foget Password</a></p> &nbsp 
+    <p><a style="margin-left: 230px ;" @click="$router.push('/fogetPass')">Foget Password</a></p> 
     <br><br>
-    <p  style="margin-left: 80px ;">Don't have account ? <a @click="$router.push('/type')"> &nbsp sign up</a></p>
+    <p  style="margin-left: 80px ;">Don't have account ? <a @click="$router.push('/type')">  sign up</a></p>
     </div>
 </template>
 

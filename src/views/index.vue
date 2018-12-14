@@ -11,10 +11,11 @@
     
             <v-spacer></v-spacer>   
         </v-toolbar>
-<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >map </v-icon> &nbsp &nbsp
-<v-icon class="box-green wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >message </v-icon> &nbsp &nbsp
-<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >group </v-icon> &nbsp &nbsp
-<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >map </v-icon> &nbsp &nbsp
+
+        <v-icon id="map" class="box-green wh"  style="font-size:175px; " >map </v-icon> 
+        <v-icon class="box-green wh"  style="font-size:175px; " >message </v-icon> 
+        <v-icon class="box-green wh"  style="font-size:175px; " >group </v-icon> 
+        <v-icon class="box-green wh"  style="font-size:175px; " >departure_board</v-icon> 
 
 
     </div>
@@ -59,7 +60,3 @@ methods:{
 },
     }
 </script>
-
-<style>
-
-</style>
