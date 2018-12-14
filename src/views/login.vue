@@ -1,22 +1,22 @@
 <!----------Make By YourName---------------->
  <template>
 <div >
-    <h1  style="margin: 150px 50px 3px 135px;" >log in</h1>
+    <h1 id="title" >log in</h1>
     <br>
-    <el-input style="margin-top: 30px;" placeholder="Username" v-model="Username" ></el-input>
+    <el-input id="user" placeholder="Username" v-model="Username" ></el-input>
     <br><br>
-    <el-input style="margin-top: 20px;" placeholder="Password" v-model="Password"></el-input>
+    <el-input id="password"  placeholder="Password" v-model="Password"></el-input>
     <br><br>
     <el-row >
-        <el-button style="margin: 20px 50px 3px 135px; ;" type="warning" round @click="$router.push('/index')">Login</el-button>
+        <el-button id="login" type="warning" round @click="$router.push('/index')">Login</el-button>
     </el-row>
     <br>
       <!--<p><a @click="$router.push('/test')">test</a></p> &nbsp -->
     
     <br>
-    <p><a style="margin-left: 230px ;" @click="$router.push('/fogetPass')">Foget Password</a></p> 
+    <p><a id="forget" @click="$router.push('/forgetPass')">Foget Password</a></p> 
     <br><br>
-    <p  style="margin-left: 80px ;">Don't have account ? <a @click="$router.push('/type')">  sign up</a></p>
+    <p id="signin">Don't have account ? <a @click="$router.push('/type')">  sign up</a></p>
     </div>
 </template>
 
@@ -60,3 +60,21 @@ methods:{
 },
     }
 </script>
+<style>
+#title{
+    margin: 110px 50px 50px 135px;
+}
+
+#password{
+    margin-top: 20px;
+}
+#login{
+    margin: 20px 50px 3px 135px;
+}
+#forget{
+    margin-left: 230px 
+}
+#signin{
+    margin-left: 80px ;
+}
+</style>
