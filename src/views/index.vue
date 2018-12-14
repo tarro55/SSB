@@ -11,9 +11,15 @@
     
             <v-spacer></v-spacer>   
         </v-toolbar>
+<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >map </v-icon> &nbsp &nbsp
+<v-icon class="box-green wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >message </v-icon> &nbsp &nbsp
+<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >group </v-icon> &nbsp &nbsp
+<v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; " >map </v-icon> &nbsp &nbsp
+
 
     </div>
 </template>
+
 
     <script>
 export default {
@@ -53,3 +59,7 @@ methods:{
 },
     }
 </script>
+
+<style>
+
+</style>

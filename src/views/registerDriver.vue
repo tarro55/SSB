@@ -1,7 +1,7 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <h1>Sign Up</h1>
+    <h1 style="margin-left:100px;" >Sign Up</h1>
     <br>
     <el-input placeholder="Username" v-model="Username"></el-input>
     <br><br>
@@ -14,7 +14,7 @@
     <el-input placeholder="DriverLicence" v-model="DriverLicence"  ></el-input>
     <br><br>
     <el-row>
-        <el-button  @click="$router.push('/login')" type="warning" round>Sign Up</el-button>
+        <el-button style="margin-left:100px;" @click="$router.push('/login')" type="warning" round>Sign Up</el-button>
     </el-row>
 
     </div>
