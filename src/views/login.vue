@@ -3,7 +3,7 @@
 <div >
     <h1 id="title" >log in</h1>
     <br>
-    <el-input id="user" placeholder="Username" v-model="Username" ></el-input>
+    <el-input id="user" placeholder="Username" v-model="Username"  ></el-input>
     <br><br>
     <el-input id="password"  placeholder="Password" v-model="Password"></el-input>
     <br><br>
@@ -16,7 +16,7 @@
     <br>
     <p><a id="forget" @click="$router.push('/forgetPass')">Foget Password</a></p> 
     <br><br>
-    <p id="signin">Don't have account ? <a @click="$router.push('/type')">  sign up</a></p>
+    <p id="signin">Don't have account ? <a @click="$router.push('/type')">sign up</a></p>
     </div>
 </template>
 

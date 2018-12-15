@@ -3,21 +3,23 @@
 <div>
     <h1>Sign Up</h1>
     <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
+    <form>
+    <el-input type="text" placeholder="Username" v-model="form.Username" required ></el-input>
     <br><br>
-    <el-input placeholder="E-mail" v-model="email"></el-input>
+    <el-input type="email" placeholder="E-mail" v-model="form.email" required ></el-input>
     <br><br>
-    <el-input placeholder="Password" v-model="Password"></el-input>
+    <el-input type="password" placeholder="Password" v-model="form.Password" required ></el-input>
     <br><br>
-    <el-input placeholder="Confirm - Password" v-model="ConfirmPass"></el-input>
+    <el-input type="password" placeholder="Confirm - Password" v-model="ConfirmPass" required ></el-input>
     <br><br>
-    <el-input placeholder="Student ID" v-model="Student_ID"  ></el-input>
+    <el-input type="vachar" placeholder="Student ID" v-model="form.Student_ID" required ></el-input>
     <br><br>
-    <el-input placeholder="School Name " v-model="School_Name"  ></el-input>
+    <el-input type="text" placeholder="School Name " v-model="from.School_Name" required ></el-input>
     <br><br>
     <el-row>
-        <el-button @click="$router.push('/login')" type="warning" round>Sign Up</el-button>
+        <el-button type="submit" @click="$router.push('/login')" round>Sign Up</el-button>
     </el-row>
+    </form>
 
     </div>
 </template>
@@ -36,12 +38,7 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-        Username:'',
-        email:'',
-        Password:'',
-        ConfirmPass:'',
-        Student_ID:'',
-        School_Name:'',
+        form:{},
 
         };
     }, 
