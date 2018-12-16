@@ -1,26 +1,22 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <h1>Sign Up</h1>
-    <br>
+    <h1>Sign In</h1>
     <form v-on:submit:prevent="registerMember()" >
-    <el-input type="text" placeholder="Username" v-model="form.Username" required ></el-input>
-    <br><br>
-    <el-input type="email" placeholder="E-mail" v-model="form.email" required ></el-input>
-    <br><br>
-    <el-input type="password" placeholder="Password" v-model="form.Password" required ></el-input>
-    <br><br>
-    <el-input type="password" placeholder="Confirm - Password" v-model="ConfirmPass" required ></el-input>
-    <br><br>
-    <el-input type="vachar" placeholder="Student ID" v-model="form.Student_ID" required ></el-input>
-    <br><br>
-    <el-input type="text" placeholder="School Name " v-model="from.School_Name" required ></el-input>
-    <br><br>
-    <el-row>
-        <el-button type="submit" round>Sign Up</el-button>
-    </el-row>
+        <input type="text" class="el-input__inner" placeholder="Username" v-model="form.Username" required/>
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Email" v-model="form.email" required/>
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Password" v-model="form.Password" required/>
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Confirm-PassWord" v-model="form.ConfirmPass" required/>
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Student ID" v-model="form.Student_ID" required/>
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="School Name" v-model="form.School_Name" required/>
+        <br><br>
+        <button type="submit" class="el-button box-brown wh shadow pd-6 circle" @click="$router.push('/login')" round>Sign Up</button>
     </form>
-
     </div>
 </template>
 
@@ -56,14 +52,13 @@ props:{
 },
     /*-------------------------Methods------------------------------------------*/
 methods:{
-    /******* Methods default run ******/
     registerMember:async function(){
-        console.log('RegisterMember form',this.form); //ส่งข้อมูลฟอร์ม
+       console.log('RegisterMember form',this.form); //ส่งข้อมูลฟอร์ม
 
     },
-
+    /******* Methods default run ******/
     load:async function(){
-    },
-    }
 }
+},
+    }
 </script>

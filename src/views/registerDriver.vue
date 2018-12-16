@@ -1,25 +1,20 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
-    <form >
-    <h1 style="margin-left:100px;" >Sign Up</h1>
-    <br>
-    <form  v-on:submit:prevent="registerDriver()" >
-    <input type="text" placeholder="Username" v-model="form.username" class="" required/>
-    <br><br>
-    <input type="email" placeholder="E-mail" v-model="form.email" required /> 
-    <br><br>
-    <input type="password" placeholder="Password" v-model="form.Password" required/>
-    <br><br>
-    <input type="password" placeholder="Confirm - Password" v-model="ConfirmPass" required/>
-    <br><br>
-    <input type="vachar" placeholder="DriverLicence" v-model="form.DriverLicence" required />
-    <br><br>
-    <el-row>
-        <el-button v-if="password == ConfirmPass" type="submit" class="box-brown wh shadow pd-6 " @click="$router.push('/login')" round>Sign Up</el-button>
-    </el-row>
+    <center><h1>Sign In</h1></center>
+    <form v-on:submit:prevent="registerDriver()" class="pd-20">
+        <input type="text" class="el-input__inner" placeholder="Username" v-model="form.Username" required />
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Email" v-model="form.email" required />
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Password" v-model="form.Password" required />
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="Confirm-PassWord" v-model="form.ConfirmPass" required />
+        <br><br>
+        <input type="text" class="el-input__inner" placeholder="DriverLicence" v-model="form.DriverLicence" required />
+        <br><br>
+        <button type="submit" class="box-brown wh shadow pd-6 " @click="$router.push('/login')" round>Sign Up</button>
     </form>
-
     </div>
 </template>
 
@@ -38,8 +33,8 @@ props:{
     data() {
     return {
         form:{},
-    };
-    },
+        };
+    }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
      async mounted() {
     /**** Call loading methods*/
@@ -56,7 +51,7 @@ props:{
     /*-------------------------Methods------------------------------------------*/
 methods:{
     registerDriver:async function(){
-        console.log('RegisterDriver form',this.form);
+       console.log('RegisterDriver form',this.form); //ส่งข้อมูลฟอร์ม
 
     },
     /******* Methods default run ******/

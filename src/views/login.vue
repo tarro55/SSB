@@ -1,81 +1,93 @@
 <!----------Make By YourName---------------->
  <template >
-<div class="box-brown " >
-    <form>
-    <v-icon id="icon" class=" wh" style="font-size:130px; border-radius:50%;"> person </v-icon>
-    <br>
-    <el-input id="user" type="text" placeholder="Username" v-model="Username"  ></el-input>
-    <br><br>
-    <el-input id="password" type="password" placeholder="Password" v-model="Password"></el-input>
-    <br><br>
-    <el-row >
-        <el-button  id="login" type="submit"  @click="$router.push('/index')" round>Login</el-button>
-    </el-row>
-    <br>
-      <!--<p><a @click="$router.push('/test')">test</a></p> &nbsp -->
-    
-    <br>
-    <p><a id="forget" @click="$router.push('/forgetPass')">Foget Password</a></p> 
-    <br><br>
-    <p id="signin">Don't have account ? <a @click="$router.push('/type')">sign up</a></p>
+  <div class="box-brown full">
+    <center>
+      <v-icon class="mrt-40 wh" style="font-size:130px;">mdi-account-circle</v-icon>
+    </center>
+    <form v-on:submit:prevent="login()" class="pd-40">
+      <br>
+      <input class="el-input__inner"   type="text" placeholder="Username" v-model="form.username" />
+      <br> <br>
+      <input class="el-input__inner" type="password" placeholder="Password" v-model="form.password" />
+      <br>
+      <br>
+      <center class="mrt-10">
+        <el-button class="full-width" type="submit" @click="$router.push('/index')" round>Login</el-button>
+      </center>
+
+      <p>
+        <a class="wh mrl-40 mrt-40" @click="$router.push('/forgetPass')">Foget Password</a>
+      </p>
+      <br>
+      <br>
     </form>
-    </div>
+    <center >
+      <p>
+        Don't have account ?
+        <a @click="$router.push('/type')">sign up</a>
+      </p>
+    </center>
+  </div>
 </template>
 
     <script>
 export default {
-    
-    name: 'Root',
-    /*-------------------------Load Component---------------------------------------*/
-    components: {
-
-    },
+  name: "Root",
+  /*-------------------------Load Component---------------------------------------*/
+  components: {},
   /*-------------------------Set Component---------------------------------------*/
-props:{
-
-},
-    /*-------------------------DataVarible---------------------------------------*/
-    data() {
+  props: {},
+  /*-------------------------DataVarible---------------------------------------*/
+  data() {
     return {
-        from:{},
-        };
-    }, 
-    /*-------------------------Run Methods when Start this Page------------------------------------------*/
-     async mounted() {
+      form: {}
+    };
+  },
+  /*-------------------------Run Methods when Start this Page------------------------------------------*/
+  async mounted() {
     /**** Call loading methods*/
-            this.load(); 
-    },
-    /*-------------------------Run Methods when Start Routed------------------------------------------*/
-     async beforeRouteEnter(to, from, next) { 
-        next()
-    },
-    /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
-    computed:{
-
-},
-    /*-------------------------Methods------------------------------------------*/
-methods:{
+    this.load();
+  },
+  /*-------------------------Run Methods when Start Routed------------------------------------------*/
+  async beforeRouteEnter(to, from, next) {
+    next();
+  },
+  /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
+  computed: {},
+  /*-------------------------Methods------------------------------------------*/
+  methods: {
     /******* Methods default run ******/
-    load:async function(){
-}
-},
-    }
+    login: async function() {
+      //  console.log('login form',this.form); //ส่งข้อมูลฟอร์ม
+    },
+
+    load: async function() {}
+  }
+};
 </script>
 <style>
-#icon{
-    margin: 90px 50px 50px 120px;
+.foot {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+.full {
+  height: 100vh;
+}
+#icon {
+  margin: 90px 50px 50px 120px;
 }
 
-#password{
-    margin-top: 20px;
+#password {
+  margin-top: 20px;
 }
-#login{
-    margin: 20px 50px 3px 150px;
+#login {
+  margin: 20px 50px 3px 150px;
 }
-#forget{
-    margin-left: 230px 
+#forget {
+  margin-left: 230px;
 }
-#signin{
-    margin-left: 80px ;
+#signin {
+  margin-left: 80px;
 }
 </style>

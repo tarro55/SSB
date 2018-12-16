@@ -1,6 +1,6 @@
 <!----------Make By YourName---------------->
  <template>
-<div>
+<div  >
     <v-toolbar color="orange" class="box">   
         <v-icon @click="$router.push('/index')">arrow_back</v-icon> 
         <v-toolbar-title >Paid List</v-toolbar-title>
@@ -63,7 +63,7 @@ methods:{
 <style>
 #toolbar{
     position: absolute;
-    bottom: 8px;
+    bottom: 10px;
 }
 #edit{
     margin: 55px 50px 50px 10px;

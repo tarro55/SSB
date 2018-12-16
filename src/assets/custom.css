@@ -454,3 +454,10 @@ body,.font,h1,h2,h3,p,h4,h5{
 
 }
 
+.full-width{
+  width:100%;
+}
+
+.hg{
+  height:100vh;
+}

@@ -22,20 +22,11 @@ let load = axios.get('')
 });
     },
 async storeData(context, params) {
-    let load = axios.post('', params)
+    let load = axios.post('api/User', params)
     .then((r) => {
         alert('Save Data Success');
     }).catch((e) => {
         alert('Error Save');
-    });
-},
-
-async updateData(context, params) {
-    let load = axios.put('' + params.id, params)
-        .then((r) => {
-        alert('Update Data Success');
-    }).catch((e) => {
-        alert('Error Update');
     });
 },
 
