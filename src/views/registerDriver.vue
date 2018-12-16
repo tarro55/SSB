@@ -1,21 +1,24 @@
 <!----------Make By YourName---------------->
  <template>
 <div>
+    <form >
     <h1 style="margin-left:100px;" >Sign Up</h1>
     <br>
-    <el-input placeholder="Username" v-model="Username"></el-input>
+    <form  v-on:submit:prevent="registerDriver()" >
+    <input type="text" placeholder="Username" v-model="form.username" class="" required/>
     <br><br>
-    <el-input placeholder="E-mail" v-model="email"></el-input>
+    <input type="email" placeholder="E-mail" v-model="form.email" required /> 
     <br><br>
-    <el-input placeholder="Password" v-model="Password"></el-input>
+    <input type="password" placeholder="Password" v-model="form.Password" required/>
     <br><br>
-    <el-input placeholder="Confirm - Password" v-model="ConfirmPass"></el-input>
+    <input type="password" placeholder="Confirm - Password" v-model="ConfirmPass" required/>
     <br><br>
-    <el-input placeholder="DriverLicence" v-model="DriverLicence"  ></el-input>
+    <input type="vachar" placeholder="DriverLicence" v-model="form.DriverLicence" required />
     <br><br>
     <el-row>
-        <el-button style="margin-left:100px;" @click="$router.push('/login')" type="warning" round>Sign Up</el-button>
+        <el-button v-if="password == ConfirmPass" type="submit" class="box-brown wh shadow pd-6 " @click="$router.push('/login')" round>Sign Up</el-button>
     </el-row>
+    </form>
 
     </div>
 </template>
@@ -34,14 +37,9 @@ props:{
     /*-------------------------DataVarible---------------------------------------*/
     data() {
     return {
-        Username:'',
-        email:'',
-        Password:'',
-        ConfirmPass:'',
-        DriverLicence:'',
-
-        };
-    }, 
+        form:{},
+    };
+    },
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
      async mounted() {
     /**** Call loading methods*/
@@ -57,6 +55,10 @@ props:{
 },
     /*-------------------------Methods------------------------------------------*/
 methods:{
+    registerDriver:async function(){
+        console.log('RegisterDriver form',this.form);
+
+    },
     /******* Methods default run ******/
     load:async function(){
 }

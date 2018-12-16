@@ -3,7 +3,7 @@
 <div>
     <h1>Sign Up</h1>
     <br>
-    <form>
+    <form v-on:submit:prevent="registerMember()" >
     <el-input type="text" placeholder="Username" v-model="form.Username" required ></el-input>
     <br><br>
     <el-input type="email" placeholder="E-mail" v-model="form.email" required ></el-input>
@@ -17,7 +17,7 @@
     <el-input type="text" placeholder="School Name " v-model="from.School_Name" required ></el-input>
     <br><br>
     <el-row>
-        <el-button type="submit" @click="$router.push('/login')" round>Sign Up</el-button>
+        <el-button type="submit" round>Sign Up</el-button>
     </el-row>
     </form>
 
@@ -39,7 +39,6 @@ props:{
     data() {
     return {
         form:{},
-
         };
     }, 
     /*-------------------------Run Methods when Start this Page------------------------------------------*/
@@ -58,8 +57,13 @@ props:{
     /*-------------------------Methods------------------------------------------*/
 methods:{
     /******* Methods default run ******/
+    registerMember:async function(){
+        console.log('RegisterMember form',this.form); //ส่งข้อมูลฟอร์ม
+
+    },
+
     load:async function(){
-}
-},
+    },
     }
+}
 </script>
