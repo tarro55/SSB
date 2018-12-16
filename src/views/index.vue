@@ -15,7 +15,7 @@
         <v-icon id="mapp" class="box-green wh"  style="font-size:145px; " >map </v-icon> 
         <v-icon id="status" class="box-green wh"  style="font-size:145px; " >departure_board </v-icon> 
         <v-icon id="member" class="box-green wh"  style="font-size:145px; " >group </v-icon> 
-        <v-icon id="pay" class="box-green wh"  style="font-size:145px; " >local_atm</v-icon> 
+        <v-icon id="pay" class="box-green wh" @click="$router.push('/paidlist')" style="font-size:145px; " >local_atm</v-icon> 
     </el-row>
 
     </div>
