@@ -4,24 +4,26 @@
     <center>
       <v-icon class="mrt-40 wh" style="font-size:130px;">mdi-account-circle</v-icon>
     </center>
-    <form v-on:submit:prevent="login()" class="pd-40">
+    <form @submit="login()" class="pd-20" >
       <br>
       <input class="el-input__inner"   type="text" placeholder="Username" v-model="form.username" />
       <br> <br>
       <input class="el-input__inner" type="password" placeholder="Password" v-model="form.password" />
-      <br>
-      <br>
+      <br> <br>
       <center class="mrt-10">
         <el-button class="full-width" type="submit" @click="$router.push('/indexDrive')" round>Login</el-button>
       </center>
+      <br>
+      <input class="wh mrl-50 " type="checkbox" value="คนขับรถตู้" >
+      <label>คนขับรถตู้</label>
 
-      <p>
-        <a class="wh mrl-40 mrt-40" @click="$router.push('/forgetPass')">Foget Password</a>
-      </p>
       <br>
       <br>
     </form>
     <center >
+      <p>
+        <a class="wh mrl-40 mrt-40" @click="$router.push('/forgetPass')">Foget Password</a>
+      </p>    
       <p>
         Don't have account ?
         <a @click="$router.push('/type')">sign up</a>
@@ -58,10 +60,12 @@ export default {
   methods: {
     /******* Methods default run ******/
     login: async function() {
-      //  console.log('login form',this.form); //ส่งข้อมูลฟอร์ม
+      
+      console.log('login form',this.form); //ส่งข้อมูลฟอร์ม
     },
 
     load: async function() {}
+
   }
 };
 </script>

@@ -22,8 +22,11 @@
       <h1 id="center">name</h1>
       <v-icon id="right" style="font-size:40px">fiber_manual_record</v-icon>
     </v-toolbar>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
     <v-footer fixed="app">
       <v-layout row wrap>
         <v-flex xs3 @click="$router.push('/indexDrive')">
