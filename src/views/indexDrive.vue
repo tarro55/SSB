@@ -11,7 +11,7 @@
     <center class="mrl-15 mrt-50">
       <v-layout row wrap>
         <v-flex xs1></v-flex>
-        <v-flex xs5 @click="$router.push('/indexDrive')">
+        <v-flex xs5 @click="$router.push('/map')">
           <v-card class="cardmenu box-green" id="card-center" width="100%" height="100%" @click="$router.push('/indexDrive')">
             <v-icon color="white" style="font-size:145px; " >map</v-icon>
           </v-card>
@@ -44,8 +44,8 @@
             <v-icon id="home" color="white">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/indexdrive')">
+        <v-flex xs3 @click="$router.push('/map')">
+          <v-card id="icon-center" @click="$router.push('/map')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>

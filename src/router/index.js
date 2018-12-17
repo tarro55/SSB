@@ -87,6 +87,16 @@ export default new Router({
             name: 'indexMember',
             component: loadView('indexMember')
         },
+        {
+            path: '/map',
+            name: 'map',
+            component: loadView('map')
+        },
+        {
+            path: '/map-test',
+            name: 'map-test',
+            component: loadView('map-test')
+        },
     ]
     
 })
