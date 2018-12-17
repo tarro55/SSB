@@ -2,15 +2,24 @@
  <template>
 <div  >
     <v-toolbar color="orange" class="box">   
-        <v-icon @click="$router.push('/index')">arrow_back</v-icon> 
-        <v-toolbar-title >Paid List</v-toolbar-title>
-        <v-icon @click="$router.push('/index')">edit</v-icon>
+
+        <v-layout class="full">
+            <v-flex xs2>
+                <v-icon   @click="$router.push('/index')">keyboard_arrow_left</v-icon> 
+            </v-flex>
+            <v-flex xs12>
+                <center><h1 >Paid List</h1></center>
+            </v-flex>
+            <v-flex xs2>
+                <v-icon  class="right" @click="$router.push('/index')">edit</v-icon>
+            </v-flex>
+        </v-layout>
         <v-spacer></v-spacer>   
     </v-toolbar>
     <v-toolbar @click="$router.push('/index')" color="white" class="box">
-        <v-icon id="home"  color="orange" style="font-size:40px">account_circle</v-icon>
-        <h1>name</h1>
-        <v-icon id="home"  style="font-size:40px">fiber_manual_record</v-icon>
+        <v-icon id="left"  color="orange" style="font-size:40px">account_circle</v-icon>
+        <h1 id="center">name</h1>
+        <v-icon id="right"  style="font-size:40px">fiber_manual_record</v-icon>
     </v-toolbar>
     <v-toolbar id="toolbar" color="gray" class="box">
         <v-icon id="home"  style="font-size:40px" @click="$router.push('/index')">home</v-icon>
@@ -61,8 +70,29 @@ methods:{
     }
 </script>
 <style>
+.full{
+    width:100%!important;
+}
+.right{
+    float:right;
+}
+#left{
+    position: absolute;
+    left: 16px;
+}
+#right{
+    position: absolute;
+    right: 16px;
+}
+#center{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
 #toolbar{
     position: absolute;
+    bottom: 0;
     bottom: 10px;
 }
 #edit{
