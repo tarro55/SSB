@@ -13,9 +13,15 @@
     <v-layout>
       <v-flex>
         <v-card>
+<<<<<<< HEAD
           <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.5">
             <center>
               <v-icon id="img-center" color="white" style="font-size:100px;">mdi-account-circle</v-icon>
+=======
+          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75">
+            <center>
+              <v-icon class="fd-center" color="white" style="font-size:100px;">mdi-account-circle</v-icon>
+>>>>>>> master
             </center>
           </v-img>
 
@@ -27,6 +33,10 @@
             <v-text-field :disabled="!isEditing" color="white" label="Birthday"></v-text-field>
             <v-text-field :disabled="!isEditing" color="white" label="Phone Number"></v-text-field>
             <v-text-field :disabled="!isEditing" color="white" label="E-mail"></v-text-field>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
           </v-card-text>
           <v-divider></v-divider>
           <v-card-actions>
@@ -43,10 +53,17 @@
         </v-card>
       </v-flex>
     </v-layout>
+<<<<<<< HEAD
     <v-footer >
       <v-container>
         <v-layout row wrap>
           <v-flex xs3>
+=======
+    <v-toolbar id="toolbar" color="gray" class="box">
+      <v-container fluid>
+        <v-layout row wrap>
+          <v-flex xs3 sm6 md3 order-md4 order-sm2>
+>>>>>>> master
             <v-card id="icon-center">
               <v-icon id="home" @click="$router.push('/index')">home</v-icon>
             </v-card>
@@ -68,7 +85,11 @@
           </v-flex>
         </v-layout>
       </v-container>
+<<<<<<< HEAD
     </v-footer>
+=======
+    </v-toolbar>
+>>>>>>> master
   </div>
 </template>
 
@@ -85,7 +106,11 @@ export default {
     return {
       hasSaved: false,
       isEditing: null,
+<<<<<<< HEAD
       model: null
+=======
+      model: null,
+>>>>>>> master
     };
   },
   /*-------------------------Run Methods when Start this Page------------------------------------------*/
@@ -128,6 +153,7 @@ export default {
 #edit {
   margin: 55px 50px 50px 10px;
 }
+<<<<<<< HEAD
 #img-center{
   padding-left: 50px;
   padding-right: 50px;
@@ -154,6 +180,38 @@ export default {
 #person {
   margin: 10%;
   text-align: center;
+=======
+#icon-center{
+  padding-left: 50%;
+  padding-right: 50%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#home {
+  margin: 10%;
+  text-align: center;
+}
+#place {
+  margin: 10%;
+  text-align: center;
+}
+#status {
+  margin: 10%;
+  text-align: center;
+}
+#person {
+  margin: 10%;
+  text-align: center;
+}
+#text-field {
+  margin-left: 10px;
+}
+.el-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+>>>>>>> master
 }
 #text-field {
   margin-left: 10px;

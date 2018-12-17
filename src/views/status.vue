@@ -1,11 +1,7 @@
 <!----------Make By YourName---------------->
  <template>
-<div class="box-brown full">
-    <h1>Sing Up</h1>
-    <br><br><br>
-     <v-icon class="box-blue wh" @click="$router.push('/registerDriver')" style="font-size:175px; border-radius:50%;" >mdi-car </v-icon> 
-     <v-icon class="box-blue wh" @click="$router.push('/registerMember')" style="font-size:175px; border-radius:50%;" >mdi-account-supervisor</v-icon>
-     
+<div >
+    <h1 >Hello</h1>
     </div>
 </template>
 
@@ -41,9 +37,6 @@ props:{
 },
     /*-------------------------Methods------------------------------------------*/
 methods:{
-    login(){
-        alert('อีแฮมอีเหี้ย')
-    },
     /******* Methods default run ******/
     load:async function(){
 }

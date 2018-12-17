@@ -12,7 +12,7 @@
       <br>
       <br>
       <center class="mrt-10">
-        <el-button class="full-width" type="submit" @click="$router.push('/index')" round>Login</el-button>
+        <el-button class="full-width" type="submit" @click="$router.push('/indexDrive')" round>Login</el-button>
       </center>
 
       <p>
@@ -74,20 +74,5 @@ export default {
 .full {
   height: 100vh;
 }
-#icon {
-  margin: 90px 50px 50px 120px;
-}
 
-#password {
-  margin-top: 20px;
-}
-#login {
-  margin: 20px 50px 3px 150px;
-}
-#forget {
-  margin-left: 230px;
-}
-#signin {
-  margin-left: 80px;
-}
 </style>
