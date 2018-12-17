@@ -3,8 +3,9 @@ import Vuex from 'vuex'
 import pathify from 'vuex-pathify';
 import loading from './loading';
 import error from "./error"
-import user from './user/user';
-import test from './test';
+import user from './user';
+import userMember from './userMember';
+
 
 Vue.use(Vuex)
 
@@ -13,7 +14,7 @@ const modules = {
   
     error : error,
     user:user,
-    test:test
+    userMember:userMember,
     
 }
 

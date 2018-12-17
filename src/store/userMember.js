@@ -1,6 +1,5 @@
 import axios from '@/axios'
 import _ from 'lodash'
-
 const state = {
 
 }
@@ -22,23 +21,26 @@ let load = axios.get('')
 });
     },
 async storeData(context, params) {
-    let load = axios.post('api/user', params)
+    let load = axios.post('api/userreg', params)
     .then((r) => {
         alert('Save Data Success');
     }).catch((e) => {
         alert('Error Save');
     });
 },
-async checkUsername(context,params){
-    let user = 0;
-    let load = await axios.get('api/check/'+params)
+
+async checkUsernameMember(context,params){
+    let userreg = 0;
+    let load = await axios.get('api/checkreg/'+params)
     .then((r) => {
-        user = r.data;
+        userreg = r.data;
     }).catch((e) => {
         
     });
-    return user;
+    return userreg;
 }
+
+
 
 }
 

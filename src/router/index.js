@@ -48,9 +48,9 @@ export default new Router({
             component: loadView('test')
          },
         {
-            path: '/index',
-            name: 'index',
-            component: loadView('index')
+            path: '/indexDrive',
+            name: 'indexDrive',
+            component: loadView('indexDrive')
         },
         {
             path: '/paidlist',
