@@ -77,6 +77,11 @@ export default new Router({
             name: 'status',
             component: loadView('status')
         }, 
+        {
+            path: '/lookprofileStd',
+            name: 'lookprofileStd',
+            component: loadView('lookprofileStd')
+        }, 
     ]
     
 })
