@@ -21,12 +21,6 @@
 
           <v-card-text>
             <v-text-field :disabled="!isEditing" id="id_number" color="white" label="ID Number"></v-text-field>
-            <v-text-field
-              :disabled="!isEditing"
-              id="driver_licence"
-              color="white"
-              label="Driver Licence"
-            ></v-text-field>
             <v-text-field :disabled="!isEditing" id="name" color="white" label="Name"></v-text-field>
             <v-text-field :disabled="!isEditing" id="sex" color="white" label="Sex"></v-text-field>
             <v-flex xs12 lg6>

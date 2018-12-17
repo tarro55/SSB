@@ -63,9 +63,19 @@ export default new Router({
             component: loadView('profile')
         }, 
         {
-            path: '/profile-test',
-            name: 'profile-test',
-            component: loadView('profile-test')
+            path: '/profileDrive',
+            name: 'profileDrive',
+            component: loadView('profileDrive')
+        }, 
+        {
+            path: '/profileStd',
+            name: 'profileStd',
+            component: loadView('profileStd')
+        }, 
+        {
+            path: '/status',
+            name: 'status',
+            component: loadView('status')
         }, 
     ]
     
