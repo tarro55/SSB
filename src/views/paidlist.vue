@@ -22,12 +22,6 @@
       <h1 id="center">name</h1>
       <v-icon id="right" style="font-size:40px">fiber_manual_record</v-icon>
     </v-toolbar>
-    <v-toolbar id="toolbar" color="gray" class="box">
-      <v-icon id="home" style="font-size:40px" @click="$router.push('/index')">home</v-icon>
-      <v-icon id="home" style="font-size:40px" @click="$router.push('/index')">place</v-icon>
-      <v-icon id="home" style="font-size:40px" @click="$router.push('/index')">chat</v-icon>
-      <v-icon id="home" style="font-size:40px" @click="$router.push('/index')">person</v-icon>
-    </v-toolbar>
     <v-footer fixed="app">
       <v-layout row wrap>
         <v-flex xs3 @click="$router.push('/indexDrive')">
@@ -45,8 +39,8 @@
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/profile')">
-          <v-card id="icon-center" @click="$router.push('/profile')">
+        <v-flex xs3 @click="$router.push('/profileDrive')">
+          <v-card id="icon-center" @click="$router.push('/profileDrive')">
             <v-icon id="person">person</v-icon>
           </v-card>
         </v-flex>
@@ -99,6 +93,12 @@ export default {
 #right {
   position: absolute;
   right: 16px;
+}
+#icon-center {
+  padding-left: 40%;
+  padding-right: 50%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 #center {
   position: absolute;
