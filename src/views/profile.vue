@@ -1,27 +1,27 @@
 <!----------Make By YourName---------------->
- <template>
-<div>
-    <v-toolbar color="orange" class="box">    
-        <v-icon @click="$router.push('/index')">arrow_back</v-icon> 
-        <v-toolbar-title @click="$router.push('/index')">Profile</v-toolbar-title>
-        <v-spacer></v-spacer>   
-    </v-toolbar>
-    <el-row>
-        <el-col :span="18" offset="3">
-            <v-toolbar @click="$router.push('/index')" color="white" class="box">
-            <v-icon id="icon_profile"  color="orange" style="font-size:40px">account_circle</v-icon>
-            <center>
-                <h1>name</h1>
-            </center>
-            </v-toolbar>
-        </el-col>
-    </el-row>
-    <v-toolbar id="toolbar" color="gray" class="box">
-        <v-icon id="home"   @click="$router.push('/index')">home</v-icon>
-        <v-icon id="place"   @click="$router.push('/index')">place</v-icon>
-        <v-icon class="material-icons md-24"   @click="$router.push('/index')">departure_board</v-icon>
-        <v-icon id="person"   @click="$router.push('/index')">person</v-icon>
-    </v-toolbar>
+<template>
+    <div>
+        <v-toolbar color="orange" class="box">    
+            <v-icon @click="$router.push('/index')">arrow_back</v-icon> 
+            <v-toolbar-title @click="$router.push('/index')">Profile</v-toolbar-title>
+            <v-spacer></v-spacer>   
+        </v-toolbar>
+        <el-row >
+            <el-col :span="18" offset="3">
+                <v-toolbar @click="$router.push('/index')" color="white" class="box">
+                <v-icon id="icon_profile"  color="orange" style="font-size:40px">account_circle</v-icon>
+                <center>
+                    <h1>name</h1>
+                </center>
+                </v-toolbar>
+            </el-col>
+        </el-row>
+        <v-toolbar id="toolbar" color="gray" class="box">
+            <v-icon id="home"   @click="$router.push('/index')">home</v-icon>
+            <v-icon id="place"   @click="$router.push('/index')">place</v-icon>
+            <v-icon id="status"   @click="$router.push('/index')">departure_board</v-icon>
+            <v-icon id="person"   @click="$router.push('/index')">person</v-icon>
+        </v-toolbar>
     </div>
 </template>
 
@@ -64,7 +64,7 @@ methods:{
 },
     }
 </script>
-<style>
+<style scoped>
 #toolbar{
     position: absolute;
     bottom: 10px;
@@ -74,6 +74,18 @@ methods:{
 }
 #home{
     margin: 55px 50px 50px 10px;
+}
+#status{
+    margin: 55px 50px 50px 10px;
+}
+#place{
+    margin: 55px 50px 50px 10px;
+}
+#person{
+    margin: 55px 50px 50px 10px;
+}
+#icon_profile{
+    margin-right: 20px;
 }
 .el-row {
     margin-bottom: 20px;
