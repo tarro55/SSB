@@ -82,6 +82,11 @@ export default new Router({
             name: 'lookprofileStd',
             component: loadView('lookprofileStd')
         }, 
+        {
+            path: '/indexMember',
+            name: 'indexMember',
+            component: loadView('indexMember')
+        },
     ]
     
 })
