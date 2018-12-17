@@ -2,7 +2,7 @@
 <template>
   <div>
     <v-toolbar card color="orange">
-      <v-icon @click="$router.push('/index')">keyboard_arrow_left</v-icon>
+      <v-icon @click="$router.push('/indexDrive')">keyboard_arrow_left</v-icon>
       <v-toolbar-title class="font-weight-light">Profile</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn color="white" fab small @click="isEditing = !isEditing">
