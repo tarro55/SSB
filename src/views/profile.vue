@@ -1,112 +1,187 @@
 <!----------Make By YourName---------------->
- <template>
-<div>
-    <v-toolbar color="orange" class="box">    
-        <v-icon @click="$router.push('/index')">arrow_back</v-icon> 
-        <v-toolbar-title @click="$router.push('/index')">Profile</v-toolbar-title>
-        <v-spacer></v-spacer>   
+<template>
+  <div>
+    <v-toolbar card color="orange">
+      <v-icon @click="$router.push('/index')">keyboard_arrow_left</v-icon>
+      <v-toolbar-title class="font-weight-light">Profile</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn color="white" fab small @click="isEditing = !isEditing">
+        <v-icon v-if="isEditing">mdi-close</v-icon>
+        <v-icon v-else>mdi-pencil</v-icon>
+      </v-btn>
     </v-toolbar>
-    <div>
-        <div id="img-profile">
+    <v-layout>
+      <v-flex>
+        <v-card>
+          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75">
             <center>
-                <v-icon class="mrt-40 wh" style="font-size:130px;">mdi-account-circle</v-icon>
+              <v-icon class="fd-center" color="white" style="font-size:100px;">mdi-account-circle</v-icon>
             </center>
-        </div>
-    </div>
-    <el-row>
-            <v-toolbar @click="$router.push('/index')" color="white" class="box">
-            <v-icon id="icon_profile"  color="orange" style="font-size:40px">account_circle</v-icon>
-            <center>
-                <h1>name</h1>
-            </center>
-            </v-toolbar>
-    </el-row>
+          </v-img>
+
+          <v-card-text>
+            <v-text-field :disabled="!isEditing" color="white" label="ID Number"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="Driver Licence"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="Name"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="Sex"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="Birthday"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="Phone Number"></v-text-field>
+            <v-text-field :disabled="!isEditing" color="white" label="E-mail"></v-text-field>
+
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn :disabled="!isEditing" color="success" @click="save">Save</v-btn>
+          </v-card-actions>
+          <v-snackbar
+            v-model="hasSaved"
+            :timeout="2000"
+            absolute
+            bottom
+            left
+          >Your profile has been updated</v-snackbar>
+        </v-card>
+      </v-flex>
+    </v-layout>
     <v-toolbar id="toolbar" color="gray" class="box">
-        <v-icon id="home"   @click="$router.push('/index')">home</v-icon>
-        <v-icon id="place"   @click="$router.push('/index')">place</v-icon>
-        <v-icon id="status"   @click="$router.push('/index')">departure_board</v-icon>
-        <v-icon id="person"   @click="$router.push('/index')">person</v-icon>
+      <v-container fluid>
+        <v-layout row wrap>
+          <v-flex xs3 sm6 md3 order-md4 order-sm2>
+            <v-card id="icon-center">
+              <v-icon id="home" @click="$router.push('/index')">home</v-icon>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm6 md3 order-md3 order-sm1>
+            <v-card id="icon-center">
+              <v-icon id="place" @click="$router.push('/index')">place</v-icon>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm6 md3 order-md2 order-sm4>
+            <v-card id="icon-center">
+              <v-icon id="status" @click="$router.push('/index')">departure_board</v-icon>
+            </v-card>
+          </v-flex>
+          <v-flex xs3 sm6 md3 order-md1 order-sm3>
+            <v-card id="icon-center">
+              <v-icon id="person" @click="$router.push('/index')">person</v-icon>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-toolbar>
-    </div>
+  </div>
 </template>
 
 
     <script>
 export default {
-    name: 'Root',
-    /*-------------------------Load Component---------------------------------------*/
-    components: {
-
-    },
+  name: "Root",
+  /*-------------------------Load Component---------------------------------------*/
+  components: {},
   /*-------------------------Set Component---------------------------------------*/
-props:{
-
-},
-    /*-------------------------DataVarible---------------------------------------*/
-    data() {
+  props: {},
+  /*-------------------------DataVarible---------------------------------------*/
+  data() {
     return {
-
-        };
-    }, 
-    /*-------------------------Run Methods when Start this Page------------------------------------------*/
-     async mounted() {
+      hasSaved: false,
+      isEditing: null,
+      model: null,
+    };
+  },
+  /*-------------------------Run Methods when Start this Page------------------------------------------*/
+  async mounted() {
     /**** Call loading methods*/
-            this.load(); 
-    },
-    /*-------------------------Run Methods when Start Routed------------------------------------------*/
-     async beforeRouteEnter(to, from, next) { 
-        next()
-    },
-    /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
-    computed:{
-
-},
-    /*-------------------------Methods------------------------------------------*/
-methods:{
+    this.load();
+  },
+  /*-------------------------Run Methods when Start Routed------------------------------------------*/
+  async beforeRouteEnter(to, from, next) {
+    next();
+  },
+  /*-------------------------Vuex Methods and Couputed Methods------------------------------------------*/
+  computed: {},
+  /*-------------------------Methods------------------------------------------*/
+  methods: {
     /******* Methods default run ******/
-    load:async function(){
-}
-},
+    load: async function() {},
+
+    customFilter(item, queryText, itemText) {
+      const textOne = item.name.toLowerCase();
+      const textTwo = item.abbr.toLowerCase();
+      const searchText = queryText.toLowerCase();
+
+      return (
+        textOne.indexOf(searchText) > -1 || textTwo.indexOf(searchText) > -1
+      );
+    },
+    save() {
+      this.isEditing = !this.isEditing;
+      this.hasSaved = true;
     }
+  }
+};
 </script>
 <style>
-#toolbar{
-    position: absolute;
-    bottom: 10px;
+#toolbar {
+  position: absolute;
+  bottom: 10px;
 }
-#edit{
-    margin: 55px 50px 50px 10px;
+#edit {
+  margin: 55px 50px 50px 10px;
 }
-#home{
-    margin: 55px 50px 50px 10px;
+#icon-center{
+  padding-left: 50%;
+  padding-right: 50%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
-#place{
-    margin: 55px 50px 50px 10px;
+#home {
+  margin: 10%;
+  text-align: center;
 }
-#status{
-    margin: 55px 50px 50px 10px;
+#place {
+  margin: 10%;
+  text-align: center;
 }
-#person{
-    margin: 55px 50px 50px 10px;
+#status {
+  margin: 10%;
+  text-align: center;
+}
+#person {
+  margin: 10%;
+  text-align: center;
+}
+#text-field {
+  margin-left: 10px;
 }
 .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .el-col {
   border-radius: 4px;
 }
-#img-profile{
-    position: absolute;
-    width: 375px;
-    height: 160px;
-    left: 0px;
-    top: 58px;
+#img-profile {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0px;
+  top: 58px;
 
-    background: url();
-    filter: blur(2px);
+  background: url(https://www.bananastore.com/wp-content/uploads/2017/03/BG-APR2017.jpg);
+  filter: blur(1px);
+}
+#right {
+  position: absolute;
+  right: 16px;
+}
+#center {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>
 

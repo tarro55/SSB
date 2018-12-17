@@ -62,6 +62,11 @@ export default new Router({
             name: 'profile',
             component: loadView('profile')
         }, 
+        {
+            path: '/profile-test',
+            name: 'profile-test',
+            component: loadView('profile-test')
+        }, 
     ]
     
 })
