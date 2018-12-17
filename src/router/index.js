@@ -57,11 +57,6 @@ export default new Router({
             name: 'paidlist',
             component: loadView('paidlist')
         }, 
-        {
-            path: '/profile',
-            name: 'profile',
-            component: loadView('profile')
-        }, 
     ]
     
 })
