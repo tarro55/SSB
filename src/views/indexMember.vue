@@ -11,25 +11,25 @@
     <center class="mrl-15 mrt-50">
       <v-layout row wrap>
         <v-flex xs1></v-flex>
-        <v-flex xs5 @click="$router.push('/indexDrive')">
-          <v-card class="cardmenu box-green" id="card-center" width="100%" height="100%" @click="$router.push('/indexDrive')">
+        <v-flex xs5 @click="$router.push('/map')">
+          <v-card class="cardmenu box-green" id="card-center" width="100%" height="100%" @click="$router.push('/map')">
             <v-icon color="white" style="font-size:145px; " >map</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs5 @click="$router.push('/status')">
-          <v-card class="cardmenu box-green" id="card-center"  @click="$router.push('/status')">
+        <v-flex xs5 @click="$router.push('/statusStd')">
+          <v-card class="cardmenu box-green" id="card-center"  @click="$router.push('/statusStd')">
             <v-icon color="white" style="font-size:145px; ">departure_board</v-icon>
           </v-card>
         </v-flex>
         <v-flex xs1></v-flex>
         <v-flex xs1></v-flex>
-        <v-flex xs5 @click="$router.push('/indexDrive')">
+        <v-flex xs5 @click="$router.push('/indexMember')">
           <v-card class="cardmenu box-green" id="card-center" @click="$router.push('/indexMember')">
             <v-icon color="white" style="font-size:145px; ">mdi-account-group</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs5 @click="$router.push('/paidlist')">
-          <v-card class="cardmenu box-green" id="card-center" @click="$router.push('/profile')">
+        <v-flex xs5 @click="$router.push('/profileStd')">
+          <v-card class="cardmenu box-green" id="card-center" @click="$router.push('/profileStd')">
             <v-icon color="white" style="font-size:145px; ">person</v-icon>
           </v-card>
         </v-flex>
@@ -39,23 +39,23 @@
 
     <v-footer fixed="app">
       <v-layout row wrap>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" color="orange" @click="$router.push('/indexdrive')">
+        <v-flex xs3 @click="$router.push('/indexMember')">
+          <v-card id="icon-center" color="orange" @click="$router.push('/indexMember')">
             <v-icon id="home" color="white">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/indexdrive')">
+        <v-flex xs3 @click="$router.push('/map')">
+          <v-card id="icon-center" @click="$router.push('/map')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/status')">
+        <v-flex xs3 @click="$router.push('/statusStd')">
+          <v-card id="icon-center" @click="$router.push('/statusStd')">
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/profileDrive')">
-          <v-card id="icon-center" @click="$router.push('/profileDrive')">
+        <v-flex xs3 @click="$router.push('/profileStd')">
+          <v-card id="icon-center" @click="$router.push('/profileStd')">
             <v-icon id="person">person</v-icon>
           </v-card>
         </v-flex>

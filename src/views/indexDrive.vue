@@ -12,12 +12,12 @@
       <v-layout row wrap>
         <v-flex xs1></v-flex>
         <v-flex xs5 @click="$router.push('/map')">
-          <v-card class="cardmenu box-green" id="card-center" width="100%" height="100%" @click="$router.push('/indexDrive')">
+          <v-card class="cardmenu box-green" id="card-center" width="100%" height="100%" @click="$router.push('/map')">
             <v-icon color="white" style="font-size:145px; " >map</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs5 @click="$router.push('/status')">
-          <v-card class="cardmenu box-green" id="card-center"  @click="$router.push('/status')">
+        <v-flex xs5 @click="$router.push('/statusDrive')">
+          <v-card class="cardmenu box-green" id="card-center"  @click="$router.push('/statusDrive')">
             <v-icon color="white" style="font-size:145px; ">departure_board</v-icon>
           </v-card>
         </v-flex>
@@ -49,8 +49,8 @@
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/status')">
+        <v-flex xs3 @click="$router.push('/statusDrive')">
+          <v-card id="icon-center" @click="$router.push('/statusDrive')">
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>

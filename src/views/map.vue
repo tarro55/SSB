@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-layout row>
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
@@ -12,6 +13,33 @@
       </v-card>
     </v-flex>
   </v-layout>
+
+
+  <v-footer fixed="app">
+      <v-layout row wrap>
+        <v-flex xs3 @click="$router.push('/indexDrive')">
+          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/index')">
+            <v-icon id="home">home</v-icon>
+          </v-card>
+        </v-flex>
+        <v-flex xs3 @click="$router.push('/map')">
+          <v-card id="icon-center" @click="$router.push('/map')" color="orange">
+            <v-icon id="place" color="white">place</v-icon>
+          </v-card>
+        </v-flex>
+        <v-flex xs3 @click="$router.push('/statusDrive')">
+          <v-card id="icon-center" @click="$router.push('/statusDrive')" >
+            <v-icon id="status" >departure_board</v-icon>
+          </v-card>
+        </v-flex>
+        <v-flex xs3 @click="$router.push('/profileDrive')">
+          <v-card id="icon-center" @click="$router.push('/profileDrive')">
+            <v-icon id="person">person</v-icon>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-footer>
+</div>
 </template>
 
 <script>
