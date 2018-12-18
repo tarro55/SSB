@@ -2,7 +2,7 @@
  <template>
   <div>
     <v-toolbar card color="orange">
-      <v-icon @click="$router.push('/indexDrive')">keyboard_arrow_left</v-icon>
+      <v-icon @click="$router.push('/indexMember')">keyboard_arrow_left</v-icon>
       <v-toolbar-title class="font-weight-light">Status</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -10,32 +10,33 @@
     <center>
       <v-flex xs12 class="card-margin">
         <v-card class="cardmenu" width="100%" height="100%">
-            <h1 id="center">Will you go today ?</h1>
-            
-          
+          <h1 id="center">Will you go today ?</h1>
+          <v-container fluid>
+            <v-switch :label="`Switch 1: ${switch1.toString()}`" v-model="switch1"></v-switch>
+          </v-container>
         </v-card>
       </v-flex>
     </center>
 
     <v-footer fixed="app">
       <v-layout row wrap>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/indexMember')">
+          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/indexMember')">
             <v-icon id="home">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/map')">
-          <v-card id="icon-center" @click="$router.push('/map')">
+        <v-flex xs3 @click="$router.push('/map-Std')">
+          <v-card id="icon-center" @click="$router.push('/map-Std')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/index')" color="orange">
+        <v-flex xs3 @click="$router.push('/statusStd')">
+          <v-card id="icon-center" @click="$router.push('/statusStd')" color="orange">
             <v-icon id="status" color="white">departure_board</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/profileDrive')">
-          <v-card id="icon-center" @click="$router.push('/profileDrive')">
+        <v-flex xs3 @click="$router.push('/profileStd')">
+          <v-card id="icon-center" @click="$router.push('/profileStd')">
             <v-icon id="person">person</v-icon>
           </v-card>
         </v-flex>
@@ -61,7 +62,9 @@ export default {
       hasSaved: false,
       isEditing: null,
       model: null,
-      paidlist: ["Payed", "Unpayed"]
+      paidlist: ["Payed", "Unpayed"],
+      switch1: "GO!",
+        switch2: "NOT GO!"
     };
   },
   /*-------------------------Run Methods when Start this Page------------------------------------------*/

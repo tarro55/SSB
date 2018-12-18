@@ -2,7 +2,7 @@
 <template>
   <div>
     <v-toolbar card color="orange">
-      <v-icon @click="$router.push('/index')">keyboard_arrow_left</v-icon>
+      <v-icon @click="$router.push('/indexDrive')">keyboard_arrow_left</v-icon>
       <v-toolbar-title class="font-weight-light">Profile</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -71,17 +71,17 @@
     <v-footer fixed="app">
       <v-layout row wrap>
         <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+          <v-card id="icon-center" @click="$router.push('/indexDrive')">
             <v-icon id="home">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/map-drive')">
+          <v-card id="icon-center" @click="$router.push('/map-drive')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/statusDrive')">
+          <v-card id="icon-center" @click="$router.push('/statusDrive')">
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>

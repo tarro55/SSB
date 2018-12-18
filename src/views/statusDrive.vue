@@ -37,17 +37,17 @@
     <v-footer fixed="app">
       <v-layout row wrap>
         <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/index')">
+          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/indexDrive')">
             <v-icon id="home">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/map')">
-          <v-card id="icon-center" @click="$router.push('/map')">
+        <v-flex xs3 @click="$router.push('/map-drive')">
+          <v-card id="icon-center" @click="$router.push('/map-drive')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/index')" color="orange">
+        <v-flex xs3 @click="$router.push('/statusDrive')">
+          <v-card id="icon-center" @click="$router.push('/statusDrive')" color="orange">
             <v-icon id="status" color="white">departure_board</v-icon>
           </v-card>
         </v-flex>

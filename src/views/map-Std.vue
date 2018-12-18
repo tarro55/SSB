@@ -1,5 +1,4 @@
-<!----------Make By YourName---------------->
- <template>
+<template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list>
@@ -28,71 +27,28 @@
       <v-toolbar-title class="blackcolor">HOME</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
-    
-    <v-content>
-      <center class="mrl-15 mrt-50">
-        <v-layout row wrap>
-          <v-flex xs1></v-flex>
-          <v-flex xs5 @click="$router.push('/map-Std')">
-            <v-card
-              class="cardmenu box-green"
-              id="card-center"
-              width="100%"
-              height="100%"
-              @click="$router.push('/map-Std')"
-            >
-              <v-icon color="white" style="font-size:145px; ">map-Std</v-icon>
-            </v-card>
-          </v-flex>
-          <v-flex xs5 @click="$router.push('/statusStd')">
-            <v-card class="cardmenu box-green" id="card-center" @click="$router.push('/statusStd')">
-              <v-icon color="white" style="font-size:145px; ">departure_board</v-icon>
-            </v-card>
-          </v-flex>
-          <v-flex xs1></v-flex>
-          <v-flex xs1></v-flex>
-          <v-flex xs5 @click="$router.push('/indexMember')">
-            <v-card
-              class="cardmenu box-green"
-              id="card-center"
-              @click="$router.push('/indexMember')"
-            >
-              <v-icon color="white" style="font-size:145px; ">mdi-account-group</v-icon>
-            </v-card>
-          </v-flex>
-          <v-flex xs5 @click="$router.push('/profileStd')">
-            <v-card
-              class="cardmenu box-green"
-              id="card-center"
-              @click="$router.push('/profileStd')"
-            >
-              <v-icon color="white" style="font-size:145px; ">person</v-icon>
-            </v-card>
-          </v-flex>
-          <v-flex xs1></v-flex>
-        </v-layout>
-      </center>
-    </v-content>
+
+    <v-content></v-content>
 
     <v-footer fixed="app">
       <v-layout row wrap>
-        <v-flex xs3 @click="$router.push('/indexMember')">
-          <v-card id="icon-center" color="orange" @click="$router.push('/indexMember')">
-            <v-icon id="home" color="white">home</v-icon>
+        <v-flex xs3 @click="$router.push('/indexDrive')">
+          <v-card id="icon-center" width="100%" height="100%" @click="$router.push('/index')">
+            <v-icon id="home">home</v-icon>
           </v-card>
         </v-flex>
         <v-flex xs3 @click="$router.push('/map-Std')">
-          <v-card id="icon-center" @click="$router.push('/map-Std')">
-            <v-icon id="place">place</v-icon>
+          <v-card id="icon-center" @click="$router.push('/map-Std')" color="orange">
+            <v-icon id="place" color="white">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/statusStd')">
-          <v-card id="icon-center" @click="$router.push('/statusStd')">
+        <v-flex xs3 @click="$router.push('/statusDrive')">
+          <v-card id="icon-center" @click="$router.push('/statusDrive')">
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/profileStd')">
-          <v-card id="icon-center" @click="$router.push('/profileStd')">
+        <v-flex xs3 @click="$router.push('/profileDrive')">
+          <v-card id="icon-center" @click="$router.push('/profileDrive')">
             <v-icon id="person">person</v-icon>
           </v-card>
         </v-flex>
@@ -101,8 +57,7 @@
   </v-app>
 </template>
 
-
-    <script>
+<script>
 export default {
   name: "Root",
   /*-------------------------Load Component---------------------------------------*/
@@ -115,13 +70,13 @@ export default {
       drawer: false,
       items: [
         {
-          href: "indexMember",
+          href: "indexDrive",
           router: true,
           title: "Home",
           icon: "home"
         },
         {
-          href: "indexMember",
+          href: "indexDrive",
           router: true,
           title: "Sttings",
           icon: "settings"
@@ -155,6 +110,15 @@ export default {
 </script>
 
 <style scoped>
+.bg-title-map-Std {
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    #ff8a00 0%,
+    rgba(255, 161, 51, 0.563536) 68.51%,
+    rgba(255, 172, 75, 0) 100%
+  );
+}
 #card-center {
   padding-left: 0%;
   padding-right: 0%;
@@ -174,4 +138,3 @@ export default {
   border-radius: 10px;
 }
 </style>
-

@@ -2,7 +2,7 @@
 <template>
   <div>
     <v-toolbar card color="orange">
-      <v-icon @click="$router.push('/index')">keyboard_arrow_left</v-icon>
+      <v-icon @click="$router.push('/indexMember')">keyboard_arrow_left</v-icon>
       <v-toolbar-title class="font-weight-light">Profile</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn color="white" fab small @click="isEditing = !isEditing">
@@ -74,18 +74,18 @@
     <!--- Footer MENU -->
     <v-footer fixed="app">
       <v-layout row wrap>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/indexMember')">
+          <v-card id="icon-center" @click="$router.push('/indexMember')">
             <v-icon id="home">home</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/indexDrive')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/map-Std')">
+          <v-card id="icon-center" @click="$router.push('/map-Std')">
             <v-icon id="place">place</v-icon>
           </v-card>
         </v-flex>
-        <v-flex xs3 @click="$router.push('/status')">
-          <v-card id="icon-center" @click="$router.push('/index')">
+        <v-flex xs3 @click="$router.push('/statusStd')">
+          <v-card id="icon-center" @click="$router.push('/statusStd')">
             <v-icon id="status">departure_board</v-icon>
           </v-card>
         </v-flex>

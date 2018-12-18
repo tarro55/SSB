@@ -47,18 +47,18 @@
             color="orange" 
             width="100%" 
             height="100%" 
-            @click="$router.push('/index')" 
+            @click="$router.push('/indexDrive')" 
           > 
             <v-icon id="home" color="white">home</v-icon> 
           </v-card> 
         </v-flex> 
-        <v-flex xs3 @click="$router.push('/indexDrive')"> 
-          <v-card id="icon-center" @click="$router.push('/index')"> 
+        <v-flex xs3 @click="$router.push('/map-drive')"> 
+          <v-card id="icon-center" @click="$router.push('/map-drive')"> 
             <v-icon id="place">place</v-icon> 
           </v-card> 
         </v-flex> 
-        <v-flex xs3 @click="$router.push('/status')"> 
-          <v-card id="icon-center" @click="$router.push('/index')"> 
+        <v-flex xs3 @click="$router.push('/statusDrive')"> 
+          <v-card id="icon-center" @click="$router.push('/statusDrive')"> 
             <v-icon id="status">departure_board</v-icon> 
           </v-card> 
         </v-flex> 

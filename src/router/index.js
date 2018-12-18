@@ -86,14 +86,14 @@ export default new Router({
       component: loadView("indexMember")
     },
     {
-      path: "/map",
-      name: "map",
-      component: loadView("map")
+      path: "/map-Std",
+      name: "map-Std",
+      component: loadView("map-Std")
     },
     {
-      path: "/map-test",
-      name: "map-test",
-      component: loadView("map-test")
+      path: "/map-drive",
+      name: "map-drive",
+      component: loadView("map-drive")
     },
     {
       path: "/statusDrive",
